@@ -1,0 +1,33 @@
+#Importing Data in R
+# 5 types of data: 
+
+#flat files
+
+#Data from excel
+
+#Databases
+
+#Internet
+
+#Statistical Software
+
+#.csv ~ comma seperated values
+#.tsv ~ tab seperated values
+
+#read.csv
+
+#readr
+    install.packages("readr")
+    library(readr)
+# skip  ~ specifies the number of lines you're ignoring in the flat file before actually importing data
+# n-max ~ specifies the number of lines you're actually importing
+#collectors ~ collector functions can be passed in a list
+
+#data.table: fread (think of it as a better read.table)
+
+#say you have 5 variables but you only want to keep the first and fifth named "a" and "e"
+    fread("path/to/file.txt", drop = 2:4)
+    fread("path/to/file.txt", select = c(1,5))
+    fread("path/to/file.txt", drop = c("b", "c", "d"))
+    fread("path/to/file.txt", select = c("a","e"))
+
