@@ -1,0 +1,13 @@
+#excel_sheets ~ list different sheets
+#read_excel() ~ actually import data into R
+
+my_workbook <- lapply(excel_sheets("data.xlsx"),
+                        read_excel,
+                        path = "data.xlsx")
+                        
+pop_a <-read_excel("urbanpop_nonames.xlsx", colnames=FALSE)
+cols <- c("Country", paste("Year", 1960:1966))
+pop_b <- read_excel("urban_pop.xlsx", colnames=cols)
+
+Summary(pop_a)
+Summary(pop_b)
