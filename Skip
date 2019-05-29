@@ -1,0 +1,6 @@
+#you can tell R to ignore a \spcified # of rows inside the excel sheets
+
+read_excel("data.xlsx, skip=15)
+urbanpop_sel <- read_excel("urbanpop.xlsx", sheets = 2, skip=20)
+#first observation
+urbanpop_sel[1,]
