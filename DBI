@@ -1,0 +1,12 @@
+library(DBI)
+
+#connect to the MySQL database:con
+
+#get table names
+table_names <- dbListTables(con)
+
+#Import all tables
+tables <- lapply(table_names, dbReadTable, conn= con)
+
+#print out tables
+print(tables)
