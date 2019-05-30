@@ -1,0 +1,9 @@
+#supercharges basic R
+#read.xls()
+
+#uses perl to import   xls->perl--->CSV--read CSV-->read.table or R data frame
+
+
+library(gdata)
+urban_pop <- read.xls("urbanpop.xls", sheet = 2)
+head(urban_pop, n = 11)
