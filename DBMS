@@ -1,0 +1,18 @@
+#Relational Database, DBMS- Database management system
+
+con <- dbConnect(RMySQL::MySQL(),
+           dbname="company",
+           host = "courses.csrrinzquibik.us-east-1.rds.amazonaws.com",
+           port = 3306,
+           user = "student",
+           password = "dataCamp)
+           
+           
+#list and import tables:
+dbListTables(con)
+dbReadTable(con, "employees")
+dbDisconnect(con) #manually disconnect from database
+  [1] TRUE
+  
+  
+  
